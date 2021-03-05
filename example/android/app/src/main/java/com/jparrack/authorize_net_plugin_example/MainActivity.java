@@ -28,6 +28,10 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
         new MethodChannel(flutterEngine.getDartExecutor(), "authorize_net_plugin").setMethodCallHandler(
                 (call, result) -> {
                     if (call.method.equals("authorizeNet")) {
+                        setupAuthorizeNet("370000000000002", "02", "2022",
+                                "900", "30028", "Jeremiah",
+                                "7594xDmRz", "34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs");
+
                         result.success("in main");
                     } else {
                         result.notImplemented();
@@ -61,7 +65,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                 .build();
 
        apiClient.getTokenWithRequest(transactionObject, this);
-       
+
     }
 
 
@@ -70,7 +74,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
     {
         Message error = errorResponse.getFirstErrorMessage();
         Toast.makeText(getActivity(),
-                error.getMessageCode() + " : " + error.getMessageText() ,
+                error.getMessageCode() + " :::::::::::: " + error.getMessageText() ,
                 Toast.LENGTH_LONG)
                 .show();
     }
