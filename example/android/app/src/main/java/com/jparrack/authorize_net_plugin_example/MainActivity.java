@@ -1,5 +1,9 @@
 package com.jparrack.authorize_net_plugin_example;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Handler;
+import android.os.StrictMode;
 import android.widget.Toast;
 
 import io.flutter.embedding.android.FlutterActivity;
@@ -17,6 +21,15 @@ import net.authorize.acceptsdk.datamodel.transaction.TransactionType;
 import net.authorize.acceptsdk.datamodel.transaction.callbacks.EncryptTransactionCallback;
 import net.authorize.acceptsdk.datamodel.transaction.response.EncryptTransactionResponse;
 import net.authorize.acceptsdk.datamodel.transaction.response.ErrorTransactionResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import io.flutter.embedding.engine.FlutterEngine;
 
@@ -64,8 +77,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                 .merchantAuthentication(merchantAuthentication) //Merchant authentication
                 .build();
 
-       apiClient.getTokenWithRequest(transactionObject, this);
-
+        apiClient.getTokenWithRequest(transactionObject, this);
     }
 
 
@@ -73,18 +85,97 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
     public void onErrorReceived(ErrorTransactionResponse errorResponse)
     {
         Message error = errorResponse.getFirstErrorMessage();
-        Toast.makeText(getActivity(),
-                error.getMessageCode() + " :::::::::::: " + error.getMessageText() ,
-                Toast.LENGTH_LONG)
-                .show();
+        AlertDialog alertDialog = new AlertDialog.Builder(this).setTitle("It worked").setMessage(
+                error.getMessageCode() + " :: " + error.getMessageText()
+        ).setPositiveButton("Yes", (dialogInterface, i) -> {
+            //set what would happen when positive button is clicked
+            finish();
+        }).show();
     }
 
     @Override
     public void onEncryptionFinished(EncryptTransactionResponse response)
     {
-        Toast.makeText(getActivity(),
-                response.getDataDescriptor() + " : " + response.getDataValue(),
-                Toast.LENGTH_LONG)
-                .show();
+        
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try  {
+                    byte[] requestBody = getBody(response.getDataValue());
+                    URL url = new URL("https://apitest.authorize.net/xml/v1/request.api");
+                    HttpURLConnection con = (HttpURLConnection)url.openConnection();
+                    con.setRequestMethod("POST");
+                    con.setRequestProperty("Content-Type", "application/json; utf-8");
+                    con.setRequestProperty("Accept", "application/json");
+
+                    OutputStream os = con.getOutputStream();
+                    os.write(requestBody);
+                    os.flush();
+                    os.close();
+
+                    int responseCode = con.getResponseCode();
+                    String body = con.getResponseMessage();
+                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                    System.out.println(requestBody);
+                    System.out.println(responseCode);
+                    System.out.println(body);
+                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                    System.out.println(e);
+                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                }
+            }
+        });
+        thread.start();
+
     }
+
+    public byte[] getBody(String dataValue) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("createTransactionRequest", createTransactionRequest(dataValue));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jsonObject.toString().getBytes();
+    }
+
+    private JSONObject createTransactionRequest(String dataValue) throws JSONException {
+        JSONObject params = new JSONObject();
+        params.put( "merchantAuthentication", merchantAuthentication());
+        params.put( "transactionRequest", transactionRequest(dataValue));
+        return params;
+    }
+
+    private JSONObject merchantAuthentication() throws JSONException {
+        JSONObject params = new JSONObject();
+        params.put( "name", "7594xDmRz");
+        params.put( "transactionKey", "79j2R59js2jUThR2");
+
+        return params;
+    }
+
+
+    private JSONObject transactionRequest(String dataValue) throws JSONException {
+        JSONObject params = new JSONObject();
+        params.put( "transactionType", "authCaptureTransaction");
+        params.put( "amount", "5");
+        params.put( "payment", payment(dataValue));
+        return params;
+    }
+
+    private JSONObject payment(String dataValue) throws JSONException {
+        JSONObject params = new JSONObject();
+        params.put( "opaqueData", opaqueData(dataValue));
+        return params;
+    }
+    private JSONObject opaqueData(String dataValue) throws JSONException {
+        JSONObject params = new JSONObject();
+        params.put( "dataDescriptor", "COMMON.ACCEPT.INAPP.PAYMENT");
+        params.put( "dataValue", dataValue);
+        return params;
+    }
+
 }
