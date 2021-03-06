@@ -52,7 +52,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                                 "900", "30028", "Jeremiah",
                                 "7594xDmRz", "34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs");
 
-                        // hopefully i can pass the response up to here
+                        // pass  response.getDataValue() here
                         result.success("in main");
                     } else {
                         result.notImplemented();
@@ -103,102 +103,15 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
     }
 
 
-    // need to pass
-    // merchantAuthentication and amount
+  // how to pass  response.getDataValue() up ?
     @Override
     public void onEncryptionFinished(EncryptTransactionResponse response)
     {
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
-        getActivity().runOnUiThread(new Runnable() {
-            public void run() {
-                try  {
-                    byte[] requestBody = getBody(response.getDataValue());
-                    URL url = new URL("https://apitest.authorize.net/xml/v1/request.api");
-                    HttpURLConnection con = (HttpURLConnection)url.openConnection();
-                    con.setRequestMethod("POST");
-                    con.setRequestProperty("Content-Type", "application/json; utf-8");
-                    con.setRequestProperty("Accept", "application/json");
-
-                    OutputStream os = con.getOutputStream();
-                    os.write(requestBody);
-                    os.flush();
-                    os.close();
-
-                    BufferedReader in = new BufferedReader(new InputStreamReader(
-                            con.getInputStream()));
-                    String inputLine;
-                    StringBuffer authResponse = new StringBuffer();
-
-                    while ((inputLine = in.readLine()) != null) {
-                        authResponse.append(inputLine);
-                    }
-                    in.close();
-
-                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    System.out.println(authResponse.toString());
-                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    Toast.makeText(getActivity(), "Payment Processed", Toast.LENGTH_SHORT).show();
-                    if (authResponse.toString().indexOf("Error") != -1){
-                        Toast.makeText(getActivity(), "Error processing payment", Toast.LENGTH_SHORT).show();
-                    }
-
-                } catch (Exception e) {
-                    Toast.makeText(getActivity(), "Error processing payment", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    System.out.println(e);
-                    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                }
-            }
-        });
+        Toast.makeText(getActivity(),
+                response.getDataDescriptor() + " : " + response.getDataValue(),
+                Toast.LENGTH_LONG)
+                .show();
     }
 
-    public byte[] getBody(String dataValue) {
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("createTransactionRequest", createTransactionRequest(dataValue));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return jsonObject.toString().getBytes();
-    }
-
-    private JSONObject createTransactionRequest(String dataValue) throws JSONException {
-        JSONObject params = new JSONObject();
-        params.put( "merchantAuthentication", merchantAuthentication());
-        params.put( "transactionRequest", transactionRequest(dataValue));
-        return params;
-    }
-
-    private JSONObject merchantAuthentication() throws JSONException {
-        JSONObject params = new JSONObject();
-        params.put( "name", "7594xDmRz");
-        params.put( "transactionKey", "79j2R59js2jUThR2");
-
-        return params;
-    }
-
-
-    private JSONObject transactionRequest(String dataValue) throws JSONException {
-        JSONObject params = new JSONObject();
-        params.put( "transactionType", "authCaptureTransaction");
-        params.put( "amount", "5");
-        params.put( "payment", payment(dataValue));
-        return params;
-    }
-
-    private JSONObject payment(String dataValue) throws JSONException {
-        JSONObject params = new JSONObject();
-        params.put( "opaqueData", opaqueData(dataValue));
-        return params;
-    }
-    private JSONObject opaqueData(String dataValue) throws JSONException {
-        JSONObject params = new JSONObject();
-        params.put( "dataDescriptor", "COMMON.ACCEPT.INAPP.PAYMENT");
-        params.put( "dataValue", dataValue);
-        return params;
-    }
 
 }
