@@ -25,7 +25,9 @@ import net.authorize.acceptsdk.datamodel.transaction.response.ErrorTransactionRe
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -96,9 +98,10 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
     @Override
     public void onEncryptionFinished(EncryptTransactionResponse response)
     {
-        
-        Thread thread = new Thread(new Runnable() {
-            @Override
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        getActivity().runOnUiThread(new Runnable() {
             public void run() {
                 try  {
                     byte[] requestBody = getBody(response.getDataValue());
@@ -114,13 +117,33 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                     os.close();
 
                     int responseCode = con.getResponseCode();
-                    String body = con.getResponseMessage();
+
+
+
+                    BufferedReader in = new BufferedReader(new InputStreamReader(
+                            con.getInputStream()));
+                    String inputLine;
+                    StringBuffer authResponse = new StringBuffer();
+
+                    while ((inputLine = in.readLine()) != null) {
+                        authResponse.append(inputLine);
+                    }
+                    in.close();
+
+                    // print result
+
+
                     System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    System.out.println(requestBody);
                     System.out.println(responseCode);
-                    System.out.println(body);
+                    System.out.println(authResponse.toString().indexOf("Error"));
                     System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                    Toast.makeText(getActivity(), "Payment Processed", Toast.LENGTH_SHORT).show();
+                    if (authResponse.toString().indexOf("Error") != -1){
+                        Toast.makeText(getActivity(), "Error processing payment", Toast.LENGTH_SHORT).show();
+                    }
+
                 } catch (Exception e) {
+                    Toast.makeText(getActivity(), "Error processing payment", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                     System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
                     System.out.println(e);
@@ -128,8 +151,6 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                 }
             }
         });
-        thread.start();
-
     }
 
     public byte[] getBody(String dataValue) {
