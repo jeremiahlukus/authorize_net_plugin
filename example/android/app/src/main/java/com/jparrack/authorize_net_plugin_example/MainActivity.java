@@ -30,7 +30,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import io.flutter.embedding.engine.FlutterEngine;
@@ -43,10 +42,17 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
         new MethodChannel(flutterEngine.getDartExecutor(), "authorize_net_plugin").setMethodCallHandler(
                 (call, result) -> {
                     if (call.method.equals("authorizeNet")) {
+                        // values passed to setupAuthorizeNet will be call args
+//                        final String e = call.argument("env"),
+//                                d = call.argument("deviceID"),
+//                                u = call.argument("user"),
+//                                p = call.argument("pass");
+
                         setupAuthorizeNet("370000000000002", "02", "2022",
                                 "900", "30028", "Jeremiah",
                                 "7594xDmRz", "34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs");
 
+                        // hopefully i can pass the response up to here
                         result.success("in main");
                     } else {
                         result.notImplemented();
@@ -58,6 +64,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
    public void setupAuthorizeNet(String card_number, String expiration_month, String expiration_year,
                              String card_cvv, String zip_code, String card_holder_name,
                              String api_login_id, String client_id) {
+        // if env != production
         AcceptSDKApiClient apiClient = new AcceptSDKApiClient.Builder (getActivity(),
                 AcceptSDKApiClient.Environment.SANDBOX)
                 .connectionTimeout(5000) // optional connection time out in milliseconds
@@ -95,12 +102,15 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
         }).show();
     }
 
+
+    // need to pass
+    // merchantAuthentication and amount
     @Override
     public void onEncryptionFinished(EncryptTransactionResponse response)
     {
-
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
         getActivity().runOnUiThread(new Runnable() {
             public void run() {
                 try  {
@@ -116,10 +126,6 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                     os.flush();
                     os.close();
 
-                    int responseCode = con.getResponseCode();
-
-
-
                     BufferedReader in = new BufferedReader(new InputStreamReader(
                             con.getInputStream()));
                     String inputLine;
@@ -130,12 +136,8 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                     }
                     in.close();
 
-                    // print result
-
-
                     System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    System.out.println(responseCode);
-                    System.out.println(authResponse.toString().indexOf("Error"));
+                    System.out.println(authResponse.toString());
                     System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
                     Toast.makeText(getActivity(), "Payment Processed", Toast.LENGTH_SHORT).show();
                     if (authResponse.toString().indexOf("Error") != -1){
