@@ -29,6 +29,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -37,23 +38,29 @@ import io.flutter.embedding.engine.FlutterEngine;
 
 public class MainActivity extends FlutterActivity implements EncryptTransactionCallback {
 
+    MethodChannel mainMethodChannel;
+    MethodChannel.Result channelResult =null;
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
-        new MethodChannel(flutterEngine.getDartExecutor(), "authorize_net_plugin").setMethodCallHandler(
+        mainMethodChannel =  new MethodChannel(flutterEngine.getDartExecutor(), "authorize_net_plugin");
+        mainMethodChannel.setMethodCallHandler(
                 (call, result) -> {
+                    channelResult = result;
                     if (call.method.equals("authorizeNet")) {
-                        // values passed to setupAuthorizeNet will be call args
-//                        final String e = call.argument("env"),
-//                                d = call.argument("deviceID"),
-//                                u = call.argument("user"),
-//                                p = call.argument("pass");
+                        final String env = call.argument("env"),
+                                card_number = call.argument("card_number"),
+                                expiration_month = call.argument("expiration_month"),
+                                expiration_year = call.argument("expiration_year"),
+                                card_cvv = call.argument("card_cvv"),
+                                zip_code = call.argument("zip_code"),
+                                card_holder_name = call.argument("card_holder_name"),
+                                api_login_id = call.argument("api_login_id"),
+                                client_id = call.argument("client_id");
 
-                        setupAuthorizeNet("370000000000002", "02", "2022",
-                                "900", "30028", "Jeremiah",
-                                "7594xDmRz", "34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs");
+                        setupAuthorizeNet(env, card_number, expiration_month, expiration_year,
+                                card_cvv, zip_code, card_holder_name,
+                                api_login_id, client_id);
 
-                        // pass  response.getDataValue() here
-                        result.success("in main");
                     } else {
                         result.notImplemented();
                     }
@@ -61,14 +68,21 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
         );
     }
 
-   public void setupAuthorizeNet(String card_number, String expiration_month, String expiration_year,
+   public void setupAuthorizeNet(String env, String card_number, String expiration_month, String expiration_year,
                              String card_cvv, String zip_code, String card_holder_name,
                              String api_login_id, String client_id) {
-        // if env != production
-        AcceptSDKApiClient apiClient = new AcceptSDKApiClient.Builder (getActivity(),
-                AcceptSDKApiClient.Environment.SANDBOX)
-                .connectionTimeout(5000) // optional connection time out in milliseconds
-                .build();
+       AcceptSDKApiClient apiClient;
+        if (env == "production") {
+            apiClient = new AcceptSDKApiClient.Builder(getActivity(),
+                   AcceptSDKApiClient.Environment.PRODUCTION)
+                   .connectionTimeout(5000) // optional connection time out in milliseconds
+                   .build();
+       } else {
+             apiClient = new AcceptSDKApiClient.Builder(getActivity(),
+                    AcceptSDKApiClient.Environment.SANDBOX)
+                    .connectionTimeout(5000) // optional connection time out in milliseconds
+                    .build();
+        }
 
         CardData cardData = new CardData.Builder(card_number,
                 expiration_month, // MM
@@ -103,14 +117,14 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
     }
 
 
+    WeakReference<String> responseRef = null;
   // how to pass  response.getDataValue() up ?
     @Override
     public void onEncryptionFinished(EncryptTransactionResponse response)
     {
-        Toast.makeText(getActivity(),
-                response.getDataDescriptor() + " : " + response.getDataValue(),
-                Toast.LENGTH_LONG)
-                .show();
+        if(channelResult!=null){
+            channelResult.success(response.getDataValue());
+        }
     }
 
 
