@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     String authorizeNet;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      authorizeNet = await AuthorizeNetPlugin.authorizeNet(
+      authorizeNet = await AuthorizeNetPlugin.authorizeNetToken(
           env: 'test',
           card_number: '370000000000002',
           expiration_month: '02',

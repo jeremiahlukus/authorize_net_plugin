@@ -12,7 +12,7 @@ class AuthorizeNetPlugin {
   //   return version;
   // }
 
-  static Future<String> authorizeNet(
+  static Future<String> authorizeNetToken(
       {@required env,
       @required card_number,
       @required expiration_month,
@@ -23,7 +23,7 @@ class AuthorizeNetPlugin {
       @required api_login_id,
       @required client_id}) async {
     final String version =
-        await _channel.invokeMethod('authorizeNet', <String, String>{
+        await _channel.invokeMethod('authorizeNetToken', <String, String>{
       'env': env,
       'card_number': card_number,
       'expiration_month': expiration_month,

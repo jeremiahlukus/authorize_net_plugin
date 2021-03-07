@@ -15,7 +15,7 @@ import AuthorizeNetAccept
     let channel = FlutterMethodChannel(name: "authorize_net_plugin", binaryMessenger: controller as! FlutterBinaryMessenger)
     
     channel.setMethodCallHandler{(methodCall, result) in
-        if(methodCall.method == "authorizeNet"){
+        if(methodCall.method == "authorizeNetToken"){
             let argErr = FlutterError(code: "BAD_ARGS", message: "Failed to parse arguments!", details: nil)
             guard let args = methodCall.arguments as? Dictionary<String, String> else {result(argErr); return }
             guard let env = args["env"] else { result(argErr); return }

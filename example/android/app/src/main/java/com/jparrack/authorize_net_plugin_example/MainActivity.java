@@ -46,7 +46,7 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
         mainMethodChannel.setMethodCallHandler(
                 (call, result) -> {
                     channelResult = result;
-                    if (call.method.equals("authorizeNet")) {
+                    if (call.method.equals("authorizeNetToken")) {
                         final String env = call.argument("env"),
                                 card_number = call.argument("card_number"),
                                 expiration_month = call.argument("expiration_month"),
@@ -78,9 +78,6 @@ public class MainActivity extends FlutterActivity implements EncryptTransactionC
                    .connectionTimeout(5000) // optional connection time out in milliseconds
                    .build();
        } else {
-            System.out.println("::::::::::::::::::::::::::::::::::::::::::::::");
-            System.out.println(env);
-            System.out.println("::::::::::::::::::::::::::::::::::::::::::::::");
              apiClient = new AcceptSDKApiClient.Builder(getActivity(),
                     AcceptSDKApiClient.Environment.SANDBOX)
                     .connectionTimeout(5000) // optional connection time out in milliseconds
