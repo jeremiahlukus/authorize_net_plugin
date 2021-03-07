@@ -1,6 +1,6 @@
+import 'package:authorize_net_plugin/authorize_net_plugin.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:authorize_net_plugin/authorize_net_plugin.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('authorize_net_plugin');
@@ -9,7 +9,7 @@ void main() {
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+      return 'someToken';
     });
   });
 
@@ -18,6 +18,17 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await AuthorizeNetPlugin.platformVersion, '42');
+    expect(
+        await AuthorizeNetPlugin.authorizeNetToken(
+            env: "env",
+            cardNumber: "card_number",
+            expirationMonth: "expiration_month",
+            expirationYear: "expiration_year",
+            cardCvv: "card_cvv",
+            zipCode: "zip_code",
+            cardHolderName: "card_holder_name",
+            apiLoginId: "api_login_id",
+            clientId: "client_id"),
+        'someToken');
   });
 }

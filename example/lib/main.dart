@@ -29,14 +29,14 @@ class _MyAppState extends State<MyApp> {
     try {
       authorizeNet = await AuthorizeNetPlugin.authorizeNetToken(
           env: 'test',
-          card_number: '370000000000002',
-          expiration_month: '02',
-          expiration_year: '2022',
-          card_cvv: '900',
-          zip_code: '30028',
-          card_holder_name: 'Jeremiah',
-          api_login_id: '7594xDmRz',
-          client_id:
+          cardNumber: '370000000000002',
+          expirationMonth: '02',
+          expirationYear: '2022',
+          cardCvv: '900',
+          zipCode: '30028',
+          cardHolderName: 'Jeremiah',
+          apiLoginId: '7594xDmRz',
+          clientId:
               '34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs');
     } on PlatformException {
       authorizeNet = 'Failed to get platform version.';

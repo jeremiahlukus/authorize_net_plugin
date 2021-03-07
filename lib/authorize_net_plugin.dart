@@ -7,32 +7,27 @@ class AuthorizeNetPlugin {
   static const MethodChannel _channel =
       const MethodChannel('authorize_net_plugin');
 
-  // static Future<String> get platformVersion async {
-  //   final String version = await _channel.invokeMethod('getPlatformVersion');
-  //   return version;
-  // }
-
   static Future<String> authorizeNetToken(
       {@required env,
-      @required card_number,
-      @required expiration_month,
-      @required expiration_year,
-      @required card_cvv,
-      @required zip_code,
-      @required card_holder_name,
-      @required api_login_id,
-      @required client_id}) async {
+      @required cardNumber,
+      @required expirationMonth,
+      @required expirationYear,
+      @required cardCvv,
+      @required zipCode,
+      @required cardHolderName,
+      @required apiLoginId,
+      @required clientId}) async {
     final String version =
         await _channel.invokeMethod('authorizeNetToken', <String, String>{
       'env': env,
-      'card_number': card_number,
-      'expiration_month': expiration_month,
-      'expiration_year': expiration_year,
-      'card_cvv': card_cvv,
-      'zip_code': zip_code,
-      'card_holder_name': card_holder_name,
-      'api_login_id': api_login_id,
-      'client_id': client_id,
+      'card_number': cardNumber,
+      'expiration_month': expirationMonth,
+      'expiration_year': expirationYear,
+      'card_cvv': cardCvv,
+      'zip_code': zipCode,
+      'card_holder_name': cardHolderName,
+      'api_login_id': apiLoginId,
+      'client_id': clientId,
     });
     return version;
   }
