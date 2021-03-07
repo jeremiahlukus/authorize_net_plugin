@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AuthorizeNetPlugin {
@@ -11,19 +12,27 @@ class AuthorizeNetPlugin {
     return version;
   }
 
-  static Future<String> get authorizeNet async {
+  static Future<String> authorizeNet(
+      {@required env,
+      @required card_number,
+      @required expiration_month,
+      @required expiration_year,
+      @required card_cvv,
+      @required zip_code,
+      @required card_holder_name,
+      @required api_login_id,
+      @required client_id}) async {
     final String version =
         await _channel.invokeMethod('authorizeNet', <String, String>{
-      'env': 'test',
-      'card_number': '370000000000002',
-      'expiration_month': '02',
-      'expiration_year': '2022',
-      'card_cvv': '900',
-      'zip_code': '30028',
-      'card_holder_name': 'Jeremiah',
-      'api_login_id': '7594xDmRz',
-      'client_id':
-          '34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs',
+      'env': env,
+      'card_number': card_number,
+      'expiration_month': expiration_month,
+      'expiration_year': expiration_year,
+      'card_cvv': card_cvv,
+      'zip_code': zip_code,
+      'card_holder_name': card_holder_name,
+      'api_login_id': api_login_id,
+      'client_id': client_id,
     });
     return version;
   }
