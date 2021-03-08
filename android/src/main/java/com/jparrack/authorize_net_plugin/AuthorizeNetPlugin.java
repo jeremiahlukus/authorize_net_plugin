@@ -44,23 +44,17 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, EncryptTransactionCallback {
 
   private EventChannel mEventChannel;
-  /**
-   * Plugin registration.
-   */
-  //private FlutterView mFlutterView;
   private Context mContext;
   private Application mApplication;
   private Intent mIntent;
   private MethodChannel mMethodChannel;
   private Activity activity;
-
-  MethodChannel.Result channelResult =null;
+  MethodChannel.Result channelResult = null;
 
   private void onAttachedToEngine(Context applicationContext, BinaryMessenger messenger) {
     this.mContext = applicationContext;
     mMethodChannel = new MethodChannel(messenger, "authorize_net_plugin");
     mMethodChannel.setMethodCallHandler(this);
-
   }
 
   @Override
@@ -79,6 +73,7 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
       setupAuthorizeNet(env, card_number, expiration_month, expiration_year,
               card_cvv, zip_code, card_holder_name,
               api_login_id, client_id);
+      channelResult = result;
     } else {
       result.notImplemented();
     }
@@ -135,23 +130,10 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
             .show();
   }
 
-
-  WeakReference<String> responseRef = null;
-  // how to pass  response.getDataValue() up ?
   @Override
   public void onEncryptionFinished(EncryptTransactionResponse response)
   {
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println("My token is here:");
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println(response.getDataValue());
-    responseRef = response.getDataValue();
-    System.out.println("::::::::::::::::::::::::");
-
     if(channelResult!=null){
-      System.out.println("::::::::::::::::::::::::");
-      System.out.println(response.getDataValue());
-      System.out.println("::::::::::::::::::::::::");
       channelResult.success(response.getDataValue());
     }
   }
