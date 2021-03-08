@@ -32,6 +32,7 @@ android {
     dependencies {
         implementation 'net.authorize:accept-sdk-android:1.0.2'
     }
+
     compileSdkVersion 30
 
     defaultConfig {

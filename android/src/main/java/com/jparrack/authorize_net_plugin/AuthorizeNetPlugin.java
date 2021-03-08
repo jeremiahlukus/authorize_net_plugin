@@ -40,6 +40,9 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+    System.out.println("::::::::::::::::::::::::");
+    System.out.println("Im attaching");
+    System.out.println("::::::::::::::::::::::::");
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "authorize_net_plugin");
     channel.setMethodCallHandler(this);
   }
@@ -98,18 +101,10 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
             .build();
 
     System.out.println("::::::::::::::::::::::::");
-    System.out.println(card_number);
-    System.out.println("::::::::::::::::::::::::");
-
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println(transactionObject);
-    System.out.println("::::::::::::::::::::::::");
-
-
-    System.out.println("::::::::::::::::::::::::");
     System.out.println(this);
     System.out.println("::::::::::::::::::::::::");
-    apiClient.getTokenWithRequest(transactionObject, AuthorizeNetPlugin.this);
+
+    apiClient.getTokenWithRequest(transactionObject, this);
   }
 
   @Override
@@ -141,13 +136,10 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
 
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    System.out.println("::::::::::::::::::::::::");
+    System.out.println("Im detaching");
+    System.out.println("::::::::::::::::::::::::");
     channel.setMethodCallHandler(null);
   }
 
-  @Override
-  public void onPointerCaptureChanged(boolean hasCapture) {
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println(hasCapture);
-    System.out.println("::::::::::::::::::::::::");
-  }
 }
