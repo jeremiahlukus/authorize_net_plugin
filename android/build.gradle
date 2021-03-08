@@ -24,6 +24,13 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 30
 
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        implementation 'net.authorize:accept-sdk-android:1.0.2'
+    }
     defaultConfig {
         minSdkVersion 16
     }
