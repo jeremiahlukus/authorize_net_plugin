@@ -2,8 +2,13 @@ package com.jparrack.authorize_net_plugin;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,7 +28,12 @@ import java.lang.ref.WeakReference;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.android.FlutterView;
+import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
+import io.flutter.plugin.common.BinaryMessenger;
+import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -31,24 +41,26 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** AuthorizeNetPlugin */
-public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin, MethodCallHandler, EncryptTransactionCallback {
+public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, EncryptTransactionCallback {
 
-  /// The MethodChannel that will the communication between Flutter and native Android
-  ///
-  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
-  /// when the Flutter Engine is detached from the Activity
-  private MethodChannel channel;
+  private EventChannel mEventChannel;
+  /**
+   * Plugin registration.
+   */
+  //private FlutterView mFlutterView;
+  private Context mContext;
+  private Application mApplication;
+  private Intent mIntent;
+  private MethodChannel mMethodChannel;
+  private Activity activity;
+
   MethodChannel.Result channelResult =null;
 
-  @Override
-  public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println("Im attaching");
-    System.out.println("::::::::::::::::::::::::");
-    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "authorize_net_plugin");
-    channel.setMethodCallHandler(this);
-    Intent intent = new Intent(Intent.ACTION_VIEW);
-    setIntent(intent);
+  private void onAttachedToEngine(Context applicationContext, BinaryMessenger messenger) {
+    this.mContext = applicationContext;
+    mMethodChannel = new MethodChannel(messenger, "authorize_net_plugin");
+    mMethodChannel.setMethodCallHandler(this);
+
   }
 
   @Override
@@ -72,17 +84,18 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
     }
   }
 
+
   public void setupAuthorizeNet(String env, String card_number, String expiration_month, String expiration_year,
                                 String card_cvv, String zip_code, String card_holder_name,
                                 String api_login_id, String client_id) {
     AcceptSDKApiClient apiClient;
     if (env == "production") {
-      apiClient = new AcceptSDKApiClient.Builder(getActivity(),
+      apiClient = new AcceptSDKApiClient.Builder(activity,
               AcceptSDKApiClient.Environment.PRODUCTION)
               .connectionTimeout(5000) // optional connection time out in milliseconds
               .build();
     } else {
-      apiClient = new AcceptSDKApiClient.Builder(getActivity(),
+      apiClient = new AcceptSDKApiClient.Builder(activity,
               AcceptSDKApiClient.Environment.SANDBOX)
               .connectionTimeout(5000) // optional connection time out in milliseconds
               .build();
@@ -104,15 +117,10 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
             .merchantAuthentication(merchantAuthentication) //Merchant authentication
             .build();
 
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println(this.getIntent());
-    System.out.println("::::::::::::::::::::::::");
-
-
-    if(this.getIntent() != null) {
       apiClient.getTokenWithRequest(transactionObject, this);
-    }
+
   }
+
 
   @Override
   public void onErrorReceived(ErrorTransactionResponse errorResponse)
@@ -121,7 +129,7 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
     System.out.println("::::::::::::::::::::::::");
     System.out.println( error.getMessageText());
     System.out.println("::::::::::::::::::::::::");
-    Toast.makeText(getActivity(),
+    Toast.makeText(activity,
             error.getMessageCode() + " : " + error.getMessageText() ,
             Toast.LENGTH_LONG)
             .show();
@@ -133,6 +141,13 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
   @Override
   public void onEncryptionFinished(EncryptTransactionResponse response)
   {
+    System.out.println("::::::::::::::::::::::::");
+    System.out.println("My token is here:");
+    System.out.println("::::::::::::::::::::::::");
+    System.out.println(response.getDataValue());
+    responseRef = response.getDataValue();
+    System.out.println("::::::::::::::::::::::::");
+
     if(channelResult!=null){
       System.out.println("::::::::::::::::::::::::");
       System.out.println(response.getDataValue());
@@ -141,12 +156,40 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
     }
   }
 
+
   @Override
-  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println("Im detaching");
-    System.out.println("::::::::::::::::::::::::");
-    channel.setMethodCallHandler(null);
+  public void onAttachedToEngine(FlutterPluginBinding binding) {
+    onAttachedToEngine(binding.getApplicationContext(), binding.getBinaryMessenger());
+  }
+
+  @Override
+  public void onDetachedFromEngine(FlutterPluginBinding binding) {
+    mMethodChannel.setMethodCallHandler(null);
+    mMethodChannel = null;
+    mEventChannel.setStreamHandler(null);
+    mEventChannel = null;
+  }
+
+  @Override
+  public void onAttachedToActivity(ActivityPluginBinding binding) {
+    activity = binding.getActivity();
+    mIntent = binding.getActivity().getIntent();
+    mApplication = binding.getActivity().getApplication();
+  }
+
+  @Override
+  public void onDetachedFromActivityForConfigChanges() {
+
+  }
+
+  @Override
+  public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) {
+
+  }
+
+  @Override
+  public void onDetachedFromActivity() {
+    activity = null;
   }
 
 }

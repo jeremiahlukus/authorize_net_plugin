@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   authorize_net_plugin:
     # When depending on this package from a real application you should use:
     #   authorize_net_plugin: ^x.y.z

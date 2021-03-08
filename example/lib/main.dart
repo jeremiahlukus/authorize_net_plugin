@@ -59,8 +59,11 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_authorizeNet\n'),
+        body: Container(
+          width: double.infinity,
+          child: Center(
+            child: Text('Running on: $_authorizeNet\n'),
+          ),
         ),
       ),
     );
