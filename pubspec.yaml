@@ -1,6 +1,6 @@
 name: authorize_net_plugin
 description: A plug that wraps the andriod and ios AuthorizeNet SDK's
-version: 0.0.2
+version: 0.0.3
 
 homepage: "https://github.com/jeremiahlukus"
 repository: "https://github.com/jeremiahlukus/authorize_net_plugin"
