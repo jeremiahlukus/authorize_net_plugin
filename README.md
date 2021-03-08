@@ -2,12 +2,32 @@
 
 A simple wrapper around the AuthorizeNet android and ios sdk 
 
+## Setting up 
+
+In Android you have to to a bit of setup. 
+First go to android/app/build.gradle  in in the android {} block add
+
+```
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        implementation 'net.authorize:accept-sdk-android:1.0.2'
+    }
+```
+
+Then go into your android/app/src/main/AndroidManifest.xml file and add 
+xmlns:tools="http://schemas.android.com/tools" in the <manifest> tag.
+Then in your <application> tag add tools:replace="android:label"
+
+
 ## How to use
 
  - add to pubfile
  
 
-After you take the apple or google payment get the card token by passing in 
+Get the Card Token used to make the createTransactionRequest request
 
 ```
 authorizeNetToken = await AuthorizeNetPlugin.authorizeNetToken(
