@@ -1,7 +1,9 @@
 package com.jparrack.authorize_net_plugin;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -45,6 +47,8 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
     System.out.println("::::::::::::::::::::::::");
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "authorize_net_plugin");
     channel.setMethodCallHandler(this);
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    setIntent(intent);
   }
 
   @Override
@@ -101,10 +105,13 @@ public class AuthorizeNetPlugin extends FlutterActivity implements FlutterPlugin
             .build();
 
     System.out.println("::::::::::::::::::::::::");
-    System.out.println(this);
+    System.out.println(this.getIntent());
     System.out.println("::::::::::::::::::::::::");
 
-    apiClient.getTokenWithRequest(transactionObject, this);
+
+    if(this.getIntent() != null) {
+      apiClient.getTokenWithRequest(transactionObject, this);
+    }
   }
 
   @Override
