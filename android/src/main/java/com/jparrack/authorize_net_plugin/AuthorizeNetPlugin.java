@@ -124,10 +124,9 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
     System.out.println("::::::::::::::::::::::::");
     System.out.println( error.getMessageText());
     System.out.println("::::::::::::::::::::::::");
-    Toast.makeText(activity,
-            error.getMessageCode() + " : " + error.getMessageText() ,
-            Toast.LENGTH_LONG)
-            .show();
+    if(channelResult!=null){
+      channelResult.success(error.getMessageText());
+    }
   }
 
   @Override

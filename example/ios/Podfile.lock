@@ -7,6 +7,7 @@ PODS:
 
 DEPENDENCIES:
   - authorize_net_plugin (from `.symlinks/plugins/authorize_net_plugin/ios`)
+  - AuthorizeNetAccept
   - Flutter (from `Flutter`)
 
 SPEC REPOS:
@@ -24,6 +25,6 @@ SPEC CHECKSUMS:
   AuthorizeNetAccept: 410bbacc7ffb37a3e17d5d4e7e65251b318f426d
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: 3057f93312bf1c8c60fe4454bfc820001b989991
 
 COCOAPODS: 1.10.1
