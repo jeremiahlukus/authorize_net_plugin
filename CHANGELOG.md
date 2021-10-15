@@ -1,3 +1,6 @@
+## 0.1.0
+Migrate to null saftey
+
 ## 0.0.3
 Update readme
 
