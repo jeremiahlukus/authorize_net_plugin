@@ -8,15 +8,15 @@ class AuthorizeNetPlugin {
       const MethodChannel('authorize_net_plugin');
 
   static Future<String> authorizeNetToken(
-      {@required env,
-      @required cardNumber,
-      @required expirationMonth,
-      @required expirationYear,
-      @required cardCvv,
-      @required zipCode,
-      @required cardHolderName,
-      @required apiLoginId,
-      @required clientId}) async {
+      {required env,
+      required cardNumber,
+      required expirationMonth,
+      required expirationYear,
+      required cardCvv,
+      required zipCode,
+      required cardHolderName,
+      required apiLoginId,
+      required clientId}) async {
     final String version =
         await _channel.invokeMethod('authorizeNetToken', <String, String>{
       'env': env,
