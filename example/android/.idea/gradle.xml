@@ -10,7 +10,7 @@
         <option name="gradleJvm" value="13" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android" />
+            <option value="$PROJECT_DIR$/../../android" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
           </set>

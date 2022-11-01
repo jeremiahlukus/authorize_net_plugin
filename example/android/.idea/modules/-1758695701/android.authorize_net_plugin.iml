@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":authorize_net_plugin" external.linked.project.path="$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.jparrack.authorize_net_plugin" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":authorize_net_plugin" external.linked.project.path="$MODULE_DIR$/../../../../../android" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.jparrack.authorize_net_plugin" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -19,8 +19,8 @@
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/src/main/res;file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/src/debug/res;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/rs/debug;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/resValues/debug" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/src/androidTest/res;file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/src/androidTestDebug/res;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/resValues/androidTest/debug" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../../android/src/main/res;file://$MODULE_DIR$/../../../../../android/src/debug/res;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/rs/debug;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/resValues/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../../android/src/androidTest/res;file://$MODULE_DIR$/../../../../../android/src/androidTestDebug/res;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/resValues/androidTest/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
         <option name="PROJECT_TYPE" value="1" />
       </configuration>
@@ -30,9 +30,9 @@
     <output url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/intermediates/javac/debug/classes" />
     <output-test url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
-    <content url="file://$USER_HOME$/Desktop">
-      <sourceFolder url="file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$USER_HOME$/Desktop/authorize_net_plugin-0.1.1/android/.gradle" />
+    <content url="file://$MODULE_DIR$/../../../../../android">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../android/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../android/.gradle" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/aidl_source_output_dir/debug/out" />
     <content url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/aidl_source_output_dir/debugAndroidTest/out" />
@@ -47,7 +47,7 @@
     <content url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/res/rs/debug" />
     <content url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/source/buildConfig/androidTest/debug" />
     <content url="file://$MODULE_DIR$/../../../../build/authorize_net_plugin/generated/source/buildConfig/debug" />
-    <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: io.flutter:flutter_embedding_debug:1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common-java8:2.2.0" level="project" />

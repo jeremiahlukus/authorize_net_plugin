@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2122124441/com.jparrack.authorize_net_plugin.android.authorize_net_plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/-2122124441/com.jparrack.authorize_net_plugin.android.authorize_net_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1758695701/android.authorize_net_plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/-1758695701/android.authorize_net_plugin.iml" />
     </modules>
   </component>
 </project>

@@ -85,6 +85,6 @@
     <orderEntry type="library" name="Gradle: androidx.window:window-java:1.0.0-beta04@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.window:window:1.0.0-beta04@aar" level="project" />
     <orderEntry type="library" name="Gradle: net.authorize:accept-sdk-android:1.0.2@aar" level="project" />
-    <orderEntry type="module" module-name="com.jparrack.authorize_net_plugin.android.authorize_net_plugin" />
+    <orderEntry type="module" module-name="android.authorize_net_plugin" />
   </component>
 </module>
