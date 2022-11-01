@@ -33,13 +33,13 @@ android {
         implementation 'net.authorize:accept-sdk-android:1.0.2'
     }
 
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.jparrack.authorize_net_plugin_example"
         minSdkVersion 16
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
