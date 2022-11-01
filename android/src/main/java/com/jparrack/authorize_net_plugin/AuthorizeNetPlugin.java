@@ -43,7 +43,6 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 /** AuthorizeNetPlugin */
 public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, EncryptTransactionCallback {
 
-  private EventChannel mEventChannel;
   private Context mContext;
   private Application mApplication;
   private Intent mIntent;
@@ -145,8 +144,6 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
   public void onDetachedFromEngine(FlutterPluginBinding binding) {
     mMethodChannel.setMethodCallHandler(null);
     mMethodChannel = null;
-    mEventChannel.setStreamHandler(null);
-    mEventChannel = null;
   }
 
   @Override
