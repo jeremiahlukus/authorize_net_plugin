@@ -1,3 +1,6 @@
+## 0.1.2
+Fixed error handling
+
 ## 0.1.1
 Up pub score
 
