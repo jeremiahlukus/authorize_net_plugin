@@ -43,7 +43,6 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 /** AuthorizeNetPlugin */
 public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, EncryptTransactionCallback {
 
-  private EventChannel mEventChannel;
   private Context mContext;
   private Application mApplication;
   private Intent mIntent;
@@ -84,16 +83,17 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
                                 String card_cvv, String zip_code, String card_holder_name,
                                 String api_login_id, String client_id) {
     AcceptSDKApiClient apiClient;
-    if (env == "production") {
+    if (env.equals("production")) {
       apiClient = new AcceptSDKApiClient.Builder(activity,
-              AcceptSDKApiClient.Environment.PRODUCTION)
-              .connectionTimeout(5000) // optional connection time out in milliseconds
-              .build();
+          AcceptSDKApiClient.Environment.PRODUCTION)
+          .connectionTimeout(5000) // optional connection time out in milliseconds
+          .build();
     } else {
+
       apiClient = new AcceptSDKApiClient.Builder(activity,
-              AcceptSDKApiClient.Environment.SANDBOX)
-              .connectionTimeout(5000) // optional connection time out in milliseconds
-              .build();
+          AcceptSDKApiClient.Environment.SANDBOX)
+          .connectionTimeout(5000) // optional connection time out in milliseconds
+          .build();
     }
 
     CardData cardData = new CardData.Builder(card_number,
@@ -121,11 +121,8 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
   public void onErrorReceived(ErrorTransactionResponse errorResponse)
   {
     Message error = errorResponse.getFirstErrorMessage();
-    System.out.println("::::::::::::::::::::::::");
-    System.out.println( error.getMessageText());
-    System.out.println("::::::::::::::::::::::::");
-    if(channelResult!=null){
-      channelResult.success(error.getMessageText());
+    if (channelResult != null) {
+      channelResult.error("-1", error.getMessageText(), null);
     }
   }
 
@@ -147,8 +144,6 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
   public void onDetachedFromEngine(FlutterPluginBinding binding) {
     mMethodChannel.setMethodCallHandler(null);
     mMethodChannel = null;
-    mEventChannel.setStreamHandler(null);
-    mEventChannel = null;
   }
 
   @Override

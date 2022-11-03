@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: net.authorize:accept-sdk-android:1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ded0552768ce9e7969ab4fd821520b95/jetified-accept-sdk-android-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ded0552768ce9e7969ab4fd821520b95/jetified-accept-sdk-android-1.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ded0552768ce9e7969ab4fd821520b95/jetified-accept-sdk-android-1.0.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.authorize/accept-sdk-android/1.0.2/82922aabd2660932ab7567a47256b7aabeafa65c/accept-sdk-android-1.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.authorize/accept-sdk-android/1.0.2/91d52189c6413405fe57a02fa4f204540ca6bf8e/accept-sdk-android-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
