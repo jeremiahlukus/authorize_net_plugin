@@ -9,11 +9,12 @@ First go to android/app/build.gradle  in in the android {} block add
 
 ```
     repositories {
-        jcenter()
+        maven { url "https://jitpack.io" }
+
     }
 
     dependencies {
-        implementation 'net.authorize:accept-sdk-android:1.0.2'
+        implementation 'com.github.AuthorizeNet:accept-sdk-android:1.04'
     }
 ```
 
