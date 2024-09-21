@@ -1,0 +1,2 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AuthorizeNetAccept.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/authorize_net_plugin.framework

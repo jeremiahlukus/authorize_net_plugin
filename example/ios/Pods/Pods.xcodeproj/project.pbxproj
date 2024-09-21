@@ -1,0 +1,1399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Flutter;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		015DFFA71E9FA97AA4A7A319D6187BE7 /* AcceptSDKTokenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE87A28118C9AB9CA6DC805A7AE946 /* AcceptSDKTokenInterface.swift */; };
+		184B29DC89DE5BCB6B19AE05B21FF384 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		243F4CBA3F9A42713900E134C6E6C8FD /* AcceptSDKErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810173509AAFFAEC9E76FC2CD36733C4 /* AcceptSDKErrorResponse.swift */; };
+		2720DE6C2F64E97EE2C229006D64A69E /* AcceptSDKBaseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3383B18F124C349FEA69B59B6AD16 /* AcceptSDKBaseURLBuilder.swift */; };
+		2AAB9BA251192147EEF7D6AA241F7C38 /* MerchantAuthenticaton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70260D05D7735E32D89391A53BE9AB2 /* MerchantAuthenticaton.swift */; };
+		2BB06E59F1E34F6DB18D870AFA1BAD36 /* FingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B43BE24873D7221736226197BF0C2 /* FingerPrint.swift */; };
+		30E7433883F5BACCB35AA1B098AA7851 /* AcceptSDKStringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA42D49F4BA34C1CF1AA903AA44929 /* AcceptSDKStringValidator.swift */; };
+		3971E200DE04922E89DBC1414B00CE84 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */; };
+		3F9A4D7B4D1B216A1EB9A853C5AEC877 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4581E2F70755CA936957ED51182EAB55 /* AcceptSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F398BC7E297CD243AD73ACAB87601 /* AcceptSDKHandler.swift */; };
+		4B250F026DF0AA77E1EA8492C2004B95 /* AuthorizeNetAccept-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7FEC28EC5A6784B97DE0434B14DB4A /* AuthorizeNetAccept-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5389F65C6D18F95A46B70BCD0D99D71D /* AuthorizeNetPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2BFBBFC611329752D5054FC5C11B5 /* AuthorizeNetPlugin.m */; };
+		5462980A58BEA64184FEC54C0F7E7053 /* SecurePaymentContainerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26515E10B6E751D97BA4BB7E81B4C15 /* SecurePaymentContainerRequest.swift */; };
+		619EA04FE9BD82ED38B9A5398B51CD62 /* SwiftAuthorizeNetPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98710B342F520B90B50F53D72C3A976 /* SwiftAuthorizeNetPlugin.swift */; };
+		70C3DA8E9D3FBD5FEA943650C3F68200 /* AcceptSDKBaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730D4124E625BA0640948486EEC34B6D /* AcceptSDKBaseInterface.swift */; };
+		876BF328F901D494777A25DBC43A4F01 /* AcceptSDKBaseInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851370033D4C17343B36BA16552B56FA /* AcceptSDKBaseInterfaceBuilder.swift */; };
+		96B346958F316706DB8F61065C7F63A5 /* AuthorizeNetPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 295258B1357A624449F9374686E871C1 /* AuthorizeNetPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		980695C60C22D1D7A95A466EC835AD2E /* AcceptSDKTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEFDF27890302D3F177A62563A2D04 /* AcceptSDKTokenResponse.swift */; };
+		9B6B734BE3665901E5F7ED4C5B3F0C82 /* AuthorizeNetAccept-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7260DCBFDEFF25E388944E22656226DB /* AuthorizeNetAccept-dummy.m */; };
+		A22F4149B40477C8D336781E844F06F7 /* AcceptSDKTokenInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CC06D12A5D2F7BD53DE70ABD5F0653 /* AcceptSDKTokenInterfaceBuilder.swift */; };
+		A2441F907339AD17342651EFE73E71C9 /* Pods-Runner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC0E3FA51DFB82384C0FA14DA3F0AF41 /* AcceptSDKTokenAPIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE46A304423BF71A48DFAB476998FF /* AcceptSDKTokenAPIBuilder.swift */; };
+		BE124F455936A4FAD3BA4F0BA65BB33C /* AcceptSDKCardFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3647DA911D8685534044FC0E997239F5 /* AcceptSDKCardFieldsValidator.swift */; };
+		C65C92FFDFDF98384F54AD043C848A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C743CAC83D64E4CDF82B730A1D2F9400 /* AcceptSDKPaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F859AF64CDE8CB1BB0EE41E9267DA2B /* AcceptSDKPaymentRequest.swift */; };
+		DB21A4CC7254FEF5FF8B6AC63B348789 /* authorize_net_plugin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B629BA3AE3EF3DB128CADCC3E3BB5F1E /* authorize_net_plugin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE8490F6C14A9923334AC1B85B72D505 /* AcceptSDKInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C9926F97DC24115A77F6F4127FED1 /* AcceptSDKInternal.swift */; };
+		EBB633A80B2B3BA44F9A55D14B4936A0 /* AcceptSDKHttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E63B684EDC66A76EB7DA01CB9959E5 /* AcceptSDKHttpConnection.swift */; };
+		ED1B21BE4AB44AC9B2915186E4104BBB /* AccepSDKtHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B90AB02F12A1822C403610CC981B7 /* AccepSDKtHttp.swift */; };
+		F290D62BDF8C0774D8EB1269EE7F9AEF /* AcceptSDKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2149226B63A0A085A55C6830CC2501 /* AcceptSDKSettings.swift */; };
+		FFD094A5C7B6F5D41E6B03C4092FC30C /* authorize_net_plugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE222604642170A0644283AFDB18CEF /* authorize_net_plugin-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EF38BF54746464C3EA0F4755F6CBD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 131425EFF4891A8D073DD17E4FDB0EDC;
+			remoteInfo = AuthorizeNetAccept;
+		};
+		9BBCB7592AAEE03EB2D25117FA038E01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		C612CE93222805C18AE735E45C0C31D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 131425EFF4891A8D073DD17E4FDB0EDC;
+			remoteInfo = AuthorizeNetAccept;
+		};
+		C65C82E8F8531E8B0C5E3AEDE900BA5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0A16918FC2BA77903BEBC91E5906A25;
+			remoteInfo = authorize_net_plugin;
+		};
+		C85B9C474F9BDB7043B7C529B84D8110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09DE87A28118C9AB9CA6DC805A7AE946 /* AcceptSDKTokenInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKTokenInterface.swift; path = AcceptSDK/Interface/AcceptSDKTokenInterface.swift; sourceTree = "<group>"; };
+		0E8F8519687AC34841142D037CF7F044 /* authorize_net_plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = authorize_net_plugin.release.xcconfig; sourceTree = "<group>"; };
+		17980EC64A9705D4EB78242B3F3CE097 /* AuthorizeNetAccept.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AuthorizeNetAccept.debug.xcconfig; sourceTree = "<group>"; };
+		1B2149226B63A0A085A55C6830CC2501 /* AcceptSDKSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKSettings.swift; path = AcceptSDK/AcceptSDKSettings.swift; sourceTree = "<group>"; };
+		295258B1357A624449F9374686E871C1 /* AuthorizeNetPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AuthorizeNetPlugin.h; path = ../../../../../../../ios/Classes/AuthorizeNetPlugin.h; sourceTree = "<group>"; };
+		317C26B9A7CEDD34ADE8F37FAAB7AC20 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
+		359B1D600E0887820243916C1C52245B /* AuthorizeNetAccept-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AuthorizeNetAccept-prefix.pch"; sourceTree = "<group>"; };
+		3647DA911D8685534044FC0E997239F5 /* AcceptSDKCardFieldsValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKCardFieldsValidator.swift; path = AcceptSDK/Validators/AcceptSDKCardFieldsValidator.swift; sourceTree = "<group>"; };
+		3A2C9926F97DC24115A77F6F4127FED1 /* AcceptSDKInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKInternal.swift; path = AcceptSDK/AcceptSDKInternal.swift; sourceTree = "<group>"; };
+		3F859AF64CDE8CB1BB0EE41E9267DA2B /* AcceptSDKPaymentRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKPaymentRequest.swift; path = AcceptSDK/Request/AcceptSDKPaymentRequest.swift; sourceTree = "<group>"; };
+		4045EDA92EE9FF4D2A82E924A0C50C9C /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		51825CD8F0558EFA53D9510F0E5BFA16 /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
+		545B90AB02F12A1822C403610CC981B7 /* AccepSDKtHttp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccepSDKtHttp.swift; path = AcceptSDK/Network/AccepSDKtHttp.swift; sourceTree = "<group>"; };
+		554B43BE24873D7221736226197BF0C2 /* FingerPrint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FingerPrint.swift; path = AcceptSDK/Request/FingerPrint.swift; sourceTree = "<group>"; };
+		576B3DCF6C45AB3676459EE3AD73AD92 /* AuthorizeNetAccept-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AuthorizeNetAccept-Info.plist"; sourceTree = "<group>"; };
+		57B7EE3FEE4C4844E2DC223EA9AB7FE9 /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
+		65EDD1CF9A87C74D779B9C595C414401 /* AuthorizeNetAccept */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AuthorizeNetAccept; path = AuthorizeNetAccept.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Runner"; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7260DCBFDEFF25E388944E22656226DB /* AuthorizeNetAccept-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AuthorizeNetAccept-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		730D4124E625BA0640948486EEC34B6D /* AcceptSDKBaseInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKBaseInterface.swift; path = AcceptSDK/Interface/AcceptSDKBaseInterface.swift; sourceTree = "<group>"; };
+		74CC06D12A5D2F7BD53DE70ABD5F0653 /* AcceptSDKTokenInterfaceBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKTokenInterfaceBuilder.swift; path = AcceptSDK/AcceptBuilder/AcceptSDKTokenInterfaceBuilder.swift; sourceTree = "<group>"; };
+		7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
+		7DB7816D970056058E1D6C3DAF25DFE0 /* authorize_net_plugin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "authorize_net_plugin-Info.plist"; sourceTree = "<group>"; };
+		810173509AAFFAEC9E76FC2CD36733C4 /* AcceptSDKErrorResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKErrorResponse.swift; path = AcceptSDK/Response/AcceptSDKErrorResponse.swift; sourceTree = "<group>"; };
+		851370033D4C17343B36BA16552B56FA /* AcceptSDKBaseInterfaceBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKBaseInterfaceBuilder.swift; path = AcceptSDK/AcceptBuilder/AcceptSDKBaseInterfaceBuilder.swift; sourceTree = "<group>"; };
+		8E4D8F5FDEB109128127922714D76C8B /* authorize_net_plugin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = authorize_net_plugin.modulemap; sourceTree = "<group>"; };
+		93712490EEEEF77C53AECF7DB819C693 /* authorize_net_plugin.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = authorize_net_plugin.podspec; path = ../../../../../../ios/authorize_net_plugin.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94D3383B18F124C349FEA69B59B6AD16 /* AcceptSDKBaseURLBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKBaseURLBuilder.swift; path = AcceptSDK/AcceptBuilder/AcceptSDKBaseURLBuilder.swift; sourceTree = "<group>"; };
+		96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Runner-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F79F8269DC34AC56BB3D1D9652C0D86 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		AE1F398BC7E297CD243AD73ACAB87601 /* AcceptSDKHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKHandler.swift; path = AcceptSDK/AcceptSDKHandler.swift; sourceTree = "<group>"; };
+		B263AC2D9A43A7B034BB49A22067D20B /* AuthorizeNetAccept.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AuthorizeNetAccept.release.xcconfig; sourceTree = "<group>"; };
+		B629BA3AE3EF3DB128CADCC3E3BB5F1E /* authorize_net_plugin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "authorize_net_plugin-umbrella.h"; sourceTree = "<group>"; };
+		B70260D05D7735E32D89391A53BE9AB2 /* MerchantAuthenticaton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MerchantAuthenticaton.swift; path = AcceptSDK/Request/MerchantAuthenticaton.swift; sourceTree = "<group>"; };
+		B80A20EB23772E333CFFE11632E02FC1 /* AuthorizeNetAccept.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AuthorizeNetAccept.modulemap; sourceTree = "<group>"; };
+		C26515E10B6E751D97BA4BB7E81B4C15 /* SecurePaymentContainerRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecurePaymentContainerRequest.swift; path = AcceptSDK/Request/SecurePaymentContainerRequest.swift; sourceTree = "<group>"; };
+		C6EA98402A94995D022D330B64B5203D /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C86021F686A3C843DCD0DCA145BF485E /* authorize_net_plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = authorize_net_plugin; path = authorize_net_plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		D0E63B684EDC66A76EB7DA01CB9959E5 /* AcceptSDKHttpConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKHttpConnection.swift; path = AcceptSDK/Network/AcceptSDKHttpConnection.swift; sourceTree = "<group>"; };
+		D2C2BFBBFC611329752D5054FC5C11B5 /* AuthorizeNetPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AuthorizeNetPlugin.m; path = ../../../../../../../ios/Classes/AuthorizeNetPlugin.m; sourceTree = "<group>"; };
+		D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		D6DA42D49F4BA34C1CF1AA903AA44929 /* AcceptSDKStringValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKStringValidator.swift; path = AcceptSDK/Validators/AcceptSDKStringValidator.swift; sourceTree = "<group>"; };
+		D9F2B4CB813B4BDC4D164C6E0868930A /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
+		E98710B342F520B90B50F53D72C3A976 /* SwiftAuthorizeNetPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftAuthorizeNetPlugin.swift; path = ../../../../../../../ios/Classes/SwiftAuthorizeNetPlugin.swift; sourceTree = "<group>"; };
+		EBB2BB23EC284D5CB91C55CFD71B7364 /* authorize_net_plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = authorize_net_plugin.debug.xcconfig; sourceTree = "<group>"; };
+		EE7FEC28EC5A6784B97DE0434B14DB4A /* AuthorizeNetAccept-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AuthorizeNetAccept-umbrella.h"; sourceTree = "<group>"; };
+		EEAE46A304423BF71A48DFAB476998FF /* AcceptSDKTokenAPIBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKTokenAPIBuilder.swift; path = AcceptSDK/AcceptBuilder/AcceptSDKTokenAPIBuilder.swift; sourceTree = "<group>"; };
+		F1DFAD6F726F3C76C3E646A441A678C3 /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
+		F49C32B3B8CF59AB437BFD7314674868 /* Pods-Runner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Runner.modulemap"; sourceTree = "<group>"; };
+		F60C118470050A39BA1A8A73FC3D9A68 /* authorize_net_plugin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "authorize_net_plugin-prefix.pch"; sourceTree = "<group>"; };
+		F99AD6CA49EDE5BF810838FAFBDE3169 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../../../../../../LICENSE; sourceTree = "<group>"; };
+		FAE222604642170A0644283AFDB18CEF /* authorize_net_plugin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "authorize_net_plugin-dummy.m"; sourceTree = "<group>"; };
+		FFFEFDF27890302D3F177A62563A2D04 /* AcceptSDKTokenResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcceptSDKTokenResponse.swift; path = AcceptSDK/Response/AcceptSDKTokenResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		174B1B31FA0181CC1C5D26EA70DB3182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184B29DC89DE5BCB6B19AE05B21FF384 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E6D8EEA1EC5BB2578484286733E403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65C92FFDFDF98384F54AD043C848A80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F136E1D500C48657F750F65CA891751B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F9A4D7B4D1B216A1EB9A853C5AEC877 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03DC5D41BAC308539E9C20C1AB927FDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				295258B1357A624449F9374686E871C1 /* AuthorizeNetPlugin.h */,
+				D2C2BFBBFC611329752D5054FC5C11B5 /* AuthorizeNetPlugin.m */,
+				E98710B342F520B90B50F53D72C3A976 /* SwiftAuthorizeNetPlugin.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3152E27072F1EDD63B1FCA51FCC127D3 /* AuthorizeNetAccept */ = {
+			isa = PBXGroup;
+			children = (
+				545B90AB02F12A1822C403610CC981B7 /* AccepSDKtHttp.swift */,
+				730D4124E625BA0640948486EEC34B6D /* AcceptSDKBaseInterface.swift */,
+				851370033D4C17343B36BA16552B56FA /* AcceptSDKBaseInterfaceBuilder.swift */,
+				94D3383B18F124C349FEA69B59B6AD16 /* AcceptSDKBaseURLBuilder.swift */,
+				3647DA911D8685534044FC0E997239F5 /* AcceptSDKCardFieldsValidator.swift */,
+				810173509AAFFAEC9E76FC2CD36733C4 /* AcceptSDKErrorResponse.swift */,
+				AE1F398BC7E297CD243AD73ACAB87601 /* AcceptSDKHandler.swift */,
+				D0E63B684EDC66A76EB7DA01CB9959E5 /* AcceptSDKHttpConnection.swift */,
+				3A2C9926F97DC24115A77F6F4127FED1 /* AcceptSDKInternal.swift */,
+				3F859AF64CDE8CB1BB0EE41E9267DA2B /* AcceptSDKPaymentRequest.swift */,
+				1B2149226B63A0A085A55C6830CC2501 /* AcceptSDKSettings.swift */,
+				D6DA42D49F4BA34C1CF1AA903AA44929 /* AcceptSDKStringValidator.swift */,
+				EEAE46A304423BF71A48DFAB476998FF /* AcceptSDKTokenAPIBuilder.swift */,
+				09DE87A28118C9AB9CA6DC805A7AE946 /* AcceptSDKTokenInterface.swift */,
+				74CC06D12A5D2F7BD53DE70ABD5F0653 /* AcceptSDKTokenInterfaceBuilder.swift */,
+				FFFEFDF27890302D3F177A62563A2D04 /* AcceptSDKTokenResponse.swift */,
+				554B43BE24873D7221736226197BF0C2 /* FingerPrint.swift */,
+				B70260D05D7735E32D89391A53BE9AB2 /* MerchantAuthenticaton.swift */,
+				C26515E10B6E751D97BA4BB7E81B4C15 /* SecurePaymentContainerRequest.swift */,
+				46A275698CC3E92DB3CEF1361E7765DA /* Support Files */,
+			);
+			name = AuthorizeNetAccept;
+			path = AuthorizeNetAccept;
+			sourceTree = "<group>";
+		};
+		3B16B00B23708C8D8D9F12D1842350BA /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				D78B071E8042B8B764FF6FA93E5FCC3A /* .. */,
+			);
+			name = ..;
+			path = ../../../../../../ios;
+			sourceTree = "<group>";
+		};
+		46A275698CC3E92DB3CEF1361E7765DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B80A20EB23772E333CFFE11632E02FC1 /* AuthorizeNetAccept.modulemap */,
+				7260DCBFDEFF25E388944E22656226DB /* AuthorizeNetAccept-dummy.m */,
+				576B3DCF6C45AB3676459EE3AD73AD92 /* AuthorizeNetAccept-Info.plist */,
+				359B1D600E0887820243916C1C52245B /* AuthorizeNetAccept-prefix.pch */,
+				EE7FEC28EC5A6784B97DE0434B14DB4A /* AuthorizeNetAccept-umbrella.h */,
+				17980EC64A9705D4EB78242B3F3CE097 /* AuthorizeNetAccept.debug.xcconfig */,
+				B263AC2D9A43A7B034BB49A22067D20B /* AuthorizeNetAccept.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AuthorizeNetAccept";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		61984494B9F61AB105943C732D27AF86 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1DFAD6F726F3C76C3E646A441A678C3 /* Flutter.debug.xcconfig */,
+				57B7EE3FEE4C4844E2DC223EA9AB7FE9 /* Flutter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Pods/Target Support Files/Flutter";
+			sourceTree = "<group>";
+		};
+		69AD79183C6279E5BAF947BB72B35841 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				9351777C9C9D18C44075B26A3595BFCF /* authorize_net_plugin */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		791C6E4B424AF06279F8918FA67B8ED6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B0D67477903E1EB8D6A9F9AF51BC5CC /* Pods-Runner */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7B0D67477903E1EB8D6A9F9AF51BC5CC /* Pods-Runner */ = {
+			isa = PBXGroup;
+			children = (
+				F49C32B3B8CF59AB437BFD7314674868 /* Pods-Runner.modulemap */,
+				C6EA98402A94995D022D330B64B5203D /* Pods-Runner-acknowledgements.markdown */,
+				D9F2B4CB813B4BDC4D164C6E0868930A /* Pods-Runner-acknowledgements.plist */,
+				7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */,
+				317C26B9A7CEDD34ADE8F37FAAB7AC20 /* Pods-Runner-frameworks.sh */,
+				51825CD8F0558EFA53D9510F0E5BFA16 /* Pods-Runner-Info.plist */,
+				96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */,
+				CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */,
+				9F79F8269DC34AC56BB3D1D9652C0D86 /* Pods-Runner.profile.xcconfig */,
+				D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */,
+			);
+			name = "Pods-Runner";
+			path = "Target Support Files/Pods-Runner";
+			sourceTree = "<group>";
+		};
+		7D1D7ED39DCC7BED4CD5754C9C326B0C /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				F13712F5C5ADAB5142BCC2AF4680949E /* Pod */,
+				61984494B9F61AB105943C732D27AF86 /* Support Files */,
+			);
+			name = Flutter;
+			path = ../Flutter;
+			sourceTree = "<group>";
+		};
+		82F943B85C3E619515936E2F9D69CF65 /* authorize_net_plugin */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B00B23708C8D8D9F12D1842350BA /* .. */,
+				E4DBDABCB040D663D91269179F24255E /* Pod */,
+				9903A488EF895A4A0981CA56CB37446B /* Support Files */,
+			);
+			name = authorize_net_plugin;
+			path = ../.symlinks/plugins/authorize_net_plugin/ios;
+			sourceTree = "<group>";
+		};
+		9351777C9C9D18C44075B26A3595BFCF /* authorize_net_plugin */ = {
+			isa = PBXGroup;
+			children = (
+				B342337E1AC177BE44A7F734A24463D3 /* ios */,
+			);
+			name = authorize_net_plugin;
+			path = authorize_net_plugin;
+			sourceTree = "<group>";
+		};
+		94AD14B2CA5312F20878F394D3950337 /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				69AD79183C6279E5BAF947BB72B35841 /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		964F436370BEB4D33F9753C40880FADC /* example */ = {
+			isa = PBXGroup;
+			children = (
+				BEFD461A51AA0FF1D903921EC59139C3 /* ios */,
+			);
+			name = example;
+			path = example;
+			sourceTree = "<group>";
+		};
+		9903A488EF895A4A0981CA56CB37446B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E4D8F5FDEB109128127922714D76C8B /* authorize_net_plugin.modulemap */,
+				FAE222604642170A0644283AFDB18CEF /* authorize_net_plugin-dummy.m */,
+				7DB7816D970056058E1D6C3DAF25DFE0 /* authorize_net_plugin-Info.plist */,
+				F60C118470050A39BA1A8A73FC3D9A68 /* authorize_net_plugin-prefix.pch */,
+				B629BA3AE3EF3DB128CADCC3E3BB5F1E /* authorize_net_plugin-umbrella.h */,
+				EBB2BB23EC284D5CB91C55CFD71B7364 /* authorize_net_plugin.debug.xcconfig */,
+				0E8F8519687AC34841142D037CF7F044 /* authorize_net_plugin.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/authorize_net_plugin";
+			sourceTree = "<group>";
+		};
+		A01C837997BE23D666B6C2173D22F54F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C86021F686A3C843DCD0DCA145BF485E /* authorize_net_plugin */,
+				65EDD1CF9A87C74D779B9C595C414401 /* AuthorizeNetAccept */,
+				669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A03570A1703AB505397469CC1D3B6A91 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F943B85C3E619515936E2F9D69CF65 /* authorize_net_plugin */,
+				7D1D7ED39DCC7BED4CD5754C9C326B0C /* Flutter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B342337E1AC177BE44A7F734A24463D3 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				03DC5D41BAC308539E9C20C1AB927FDF /* Classes */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		BEFD461A51AA0FF1D903921EC59139C3 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				94AD14B2CA5312F20878F394D3950337 /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				A03570A1703AB505397469CC1D3B6A91 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				EF0E18930A773A0DD03AF008D9FABEE7 /* Pods */,
+				A01C837997BE23D666B6C2173D22F54F /* Products */,
+				791C6E4B424AF06279F8918FA67B8ED6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D78B071E8042B8B764FF6FA93E5FCC3A /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				964F436370BEB4D33F9753C40880FADC /* example */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E4DBDABCB040D663D91269179F24255E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				93712490EEEEF77C53AECF7DB819C693 /* authorize_net_plugin.podspec */,
+				F99AD6CA49EDE5BF810838FAFBDE3169 /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		EF0E18930A773A0DD03AF008D9FABEE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3152E27072F1EDD63B1FCA51FCC127D3 /* AuthorizeNetAccept */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F13712F5C5ADAB5142BCC2AF4680949E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4045EDA92EE9FF4D2A82E924A0C50C9C /* Flutter.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		51C276C1507038820326179A939C2F21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B250F026DF0AA77E1EA8492C2004B95 /* AuthorizeNetAccept-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E533C822C65F3F3505C90FCA1F9C04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB21A4CC7254FEF5FF8B6AC63B348789 /* authorize_net_plugin-umbrella.h in Headers */,
+				96B346958F316706DB8F61065C7F63A5 /* AuthorizeNetPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18931DE1077D25672CE9C691BCAA065 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2441F907339AD17342651EFE73E71C9 /* Pods-Runner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		131425EFF4891A8D073DD17E4FDB0EDC /* AuthorizeNetAccept */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D54C678BA2DFB02471C2364796C112A4 /* Build configuration list for PBXNativeTarget "AuthorizeNetAccept" */;
+			buildPhases = (
+				51C276C1507038820326179A939C2F21 /* Headers */,
+				6BE317BCDD517AD5DB52EC9629F8318B /* Sources */,
+				174B1B31FA0181CC1C5D26EA70DB3182 /* Frameworks */,
+				1E16056F7161FC88386808A5B996D525 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthorizeNetAccept;
+			productName = AuthorizeNetAccept;
+			productReference = 65EDD1CF9A87C74D779B9C595C414401 /* AuthorizeNetAccept */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B74B458B450D74B75744B87BD747314 /* Pods-Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EDFF07E086B650BD1C4DFC7A267578F /* Build configuration list for PBXNativeTarget "Pods-Runner" */;
+			buildPhases = (
+				D18931DE1077D25672CE9C691BCAA065 /* Headers */,
+				9090F5FC2321660B2AA2C7FFCFC56154 /* Sources */,
+				F136E1D500C48657F750F65CA891751B /* Frameworks */,
+				A447AA31D903E669D64AA70DE1FBCFE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				047886B6ADF8DCDBF1233D7C9370FD8C /* PBXTargetDependency */,
+				D32F73E69B117E077BA44F219BAD4FBC /* PBXTargetDependency */,
+				C841A6D7B6831C72C8766BDAB35D0C10 /* PBXTargetDependency */,
+			);
+			name = "Pods-Runner";
+			productName = Pods_Runner;
+			productReference = 669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */;
+			productType = "com.apple.product-type.framework";
+		};
+		D0A16918FC2BA77903BEBC91E5906A25 /* authorize_net_plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83754BE2A21B8B06A467F4BC592FEA11 /* Build configuration list for PBXNativeTarget "authorize_net_plugin" */;
+			buildPhases = (
+				B0E533C822C65F3F3505C90FCA1F9C04 /* Headers */,
+				ABDB7FFF48439783E2BE5C75EDC9032E /* Sources */,
+				B8E6D8EEA1EC5BB2578484286733E403 /* Frameworks */,
+				232B2F369995794F1DA72F2D683E0CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8271975C4103C64120898AD17E866EAF /* PBXTargetDependency */,
+				807F4892D6076C667CF6AA69FE1F1DF2 /* PBXTargetDependency */,
+			);
+			name = authorize_net_plugin;
+			productName = authorize_net_plugin;
+			productReference = C86021F686A3C843DCD0DCA145BF485E /* authorize_net_plugin */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A01C837997BE23D666B6C2173D22F54F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0A16918FC2BA77903BEBC91E5906A25 /* authorize_net_plugin */,
+				131425EFF4891A8D073DD17E4FDB0EDC /* AuthorizeNetAccept */,
+				1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */,
+				8B74B458B450D74B75744B87BD747314 /* Pods-Runner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E16056F7161FC88386808A5B996D525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232B2F369995794F1DA72F2D683E0CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A447AA31D903E669D64AA70DE1FBCFE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BE317BCDD517AD5DB52EC9629F8318B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1B21BE4AB44AC9B2915186E4104BBB /* AccepSDKtHttp.swift in Sources */,
+				70C3DA8E9D3FBD5FEA943650C3F68200 /* AcceptSDKBaseInterface.swift in Sources */,
+				876BF328F901D494777A25DBC43A4F01 /* AcceptSDKBaseInterfaceBuilder.swift in Sources */,
+				2720DE6C2F64E97EE2C229006D64A69E /* AcceptSDKBaseURLBuilder.swift in Sources */,
+				BE124F455936A4FAD3BA4F0BA65BB33C /* AcceptSDKCardFieldsValidator.swift in Sources */,
+				243F4CBA3F9A42713900E134C6E6C8FD /* AcceptSDKErrorResponse.swift in Sources */,
+				4581E2F70755CA936957ED51182EAB55 /* AcceptSDKHandler.swift in Sources */,
+				EBB633A80B2B3BA44F9A55D14B4936A0 /* AcceptSDKHttpConnection.swift in Sources */,
+				DE8490F6C14A9923334AC1B85B72D505 /* AcceptSDKInternal.swift in Sources */,
+				C743CAC83D64E4CDF82B730A1D2F9400 /* AcceptSDKPaymentRequest.swift in Sources */,
+				F290D62BDF8C0774D8EB1269EE7F9AEF /* AcceptSDKSettings.swift in Sources */,
+				30E7433883F5BACCB35AA1B098AA7851 /* AcceptSDKStringValidator.swift in Sources */,
+				BC0E3FA51DFB82384C0FA14DA3F0AF41 /* AcceptSDKTokenAPIBuilder.swift in Sources */,
+				015DFFA71E9FA97AA4A7A319D6187BE7 /* AcceptSDKTokenInterface.swift in Sources */,
+				A22F4149B40477C8D336781E844F06F7 /* AcceptSDKTokenInterfaceBuilder.swift in Sources */,
+				980695C60C22D1D7A95A466EC835AD2E /* AcceptSDKTokenResponse.swift in Sources */,
+				9B6B734BE3665901E5F7ED4C5B3F0C82 /* AuthorizeNetAccept-dummy.m in Sources */,
+				2BB06E59F1E34F6DB18D870AFA1BAD36 /* FingerPrint.swift in Sources */,
+				2AAB9BA251192147EEF7D6AA241F7C38 /* MerchantAuthenticaton.swift in Sources */,
+				5462980A58BEA64184FEC54C0F7E7053 /* SecurePaymentContainerRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9090F5FC2321660B2AA2C7FFCFC56154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3971E200DE04922E89DBC1414B00CE84 /* Pods-Runner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABDB7FFF48439783E2BE5C75EDC9032E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD094A5C7B6F5D41E6B03C4092FC30C /* authorize_net_plugin-dummy.m in Sources */,
+				5389F65C6D18F95A46B70BCD0D99D71D /* AuthorizeNetPlugin.m in Sources */,
+				619EA04FE9BD82ED38B9A5398B51CD62 /* SwiftAuthorizeNetPlugin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		047886B6ADF8DCDBF1233D7C9370FD8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AuthorizeNetAccept;
+			target = 131425EFF4891A8D073DD17E4FDB0EDC /* AuthorizeNetAccept */;
+			targetProxy = C612CE93222805C18AE735E45C0C31D3 /* PBXContainerItemProxy */;
+		};
+		807F4892D6076C667CF6AA69FE1F1DF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = C85B9C474F9BDB7043B7C529B84D8110 /* PBXContainerItemProxy */;
+		};
+		8271975C4103C64120898AD17E866EAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AuthorizeNetAccept;
+			target = 131425EFF4891A8D073DD17E4FDB0EDC /* AuthorizeNetAccept */;
+			targetProxy = 0EF38BF54746464C3EA0F4755F6CBD41 /* PBXContainerItemProxy */;
+		};
+		C841A6D7B6831C72C8766BDAB35D0C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = authorize_net_plugin;
+			target = D0A16918FC2BA77903BEBC91E5906A25 /* authorize_net_plugin */;
+			targetProxy = C65C82E8F8531E8B0C5E3AEDE900BA5D /* PBXContainerItemProxy */;
+		};
+		D32F73E69B117E077BA44F219BAD4FBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 9BBCB7592AAEE03EB2D25117FA038E01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1819B7929BCB2F2927819074AB69357C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B7EE3FEE4C4844E2DC223EA9AB7FE9 /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19C1B5201485DFB3160241FA962BE606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DFAD6F726F3C76C3E646A441A678C3 /* Flutter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20D7F69E7486BE43C2B147D17C1CFD92 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8F8519687AC34841142D037CF7F044 /* authorize_net_plugin.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/authorize_net_plugin/authorize_net_plugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = authorize_net_plugin;
+				PRODUCT_NAME = authorize_net_plugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4903018C7F89BF603A5363B3CC71979C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB2BB23EC284D5CB91C55CFD71B7364 /* authorize_net_plugin.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/authorize_net_plugin/authorize_net_plugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = authorize_net_plugin;
+				PRODUCT_NAME = authorize_net_plugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5AF1AC88E5F655C93D1E3B5012F6FDC8 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_PROFILE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Profile;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8C03907E6E296DACFBE3CB461397E2A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B263AC2D9A43A7B034BB49A22067D20B /* AuthorizeNetAccept.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept.modulemap";
+				PRODUCT_MODULE_NAME = AuthorizeNetAccept;
+				PRODUCT_NAME = AuthorizeNetAccept;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BE0E0BF511D64A4A179E4B7A7F752F27 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F79F8269DC34AC56BB3D1D9652C0D86 /* Pods-Runner.profile.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		C35DCE7341E790B006AEC136FB1EF0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DB26D2664DAC0BFEA12225C583F8AB37 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B263AC2D9A43A7B034BB49A22067D20B /* AuthorizeNetAccept.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept.modulemap";
+				PRODUCT_MODULE_NAME = AuthorizeNetAccept;
+				PRODUCT_NAME = AuthorizeNetAccept;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		DE37A609EC27A69E57A684D8FA1EC249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17980EC64A9705D4EB78242B3F3CE097 /* AuthorizeNetAccept.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AuthorizeNetAccept/AuthorizeNetAccept.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = AuthorizeNetAccept;
+				PRODUCT_NAME = AuthorizeNetAccept;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB089FB373274AE4AFE8A79676F66F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8F8519687AC34841142D037CF7F044 /* authorize_net_plugin.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/authorize_net_plugin/authorize_net_plugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/authorize_net_plugin/authorize_net_plugin.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = authorize_net_plugin;
+				PRODUCT_NAME = authorize_net_plugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EED086C2E68FF9CD7D027A8A2728AD13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/jeremiah.parrack/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7E5F691B952670B5C5A703D24863EF1 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B7EE3FEE4C4844E2DC223EA9AB7FE9 /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				5AF1AC88E5F655C93D1E3B5012F6FDC8 /* Profile */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83754BE2A21B8B06A467F4BC592FEA11 /* Build configuration list for PBXNativeTarget "authorize_net_plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4903018C7F89BF603A5363B3CC71979C /* Debug */,
+				20D7F69E7486BE43C2B147D17C1CFD92 /* Profile */,
+				EB089FB373274AE4AFE8A79676F66F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C1B5201485DFB3160241FA962BE606 /* Debug */,
+				F7E5F691B952670B5C5A703D24863EF1 /* Profile */,
+				1819B7929BCB2F2927819074AB69357C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EDFF07E086B650BD1C4DFC7A267578F /* Build configuration list for PBXNativeTarget "Pods-Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C35DCE7341E790B006AEC136FB1EF0D6 /* Debug */,
+				BE0E0BF511D64A4A179E4B7A7F752F27 /* Profile */,
+				EED086C2E68FF9CD7D027A8A2728AD13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D54C678BA2DFB02471C2364796C112A4 /* Build configuration list for PBXNativeTarget "AuthorizeNetAccept" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE37A609EC27A69E57A684D8FA1EC249 /* Debug */,
+				DB26D2664DAC0BFEA12225C583F8AB37 /* Profile */,
+				8C03907E6E296DACFBE3CB461397E2A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -17,7 +17,7 @@ public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     try {
       flutterEngine.getPlugins().add(new com.jparrack.authorize_net_plugin.AuthorizeNetPlugin());
-    } catch(Exception e) {
+    } catch (Exception e) {
       Log.e(TAG, "Error registering plugin authorize_net_plugin, com.jparrack.authorize_net_plugin.AuthorizeNetPlugin", e);
     }
   }

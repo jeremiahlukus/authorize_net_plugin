@@ -3,8 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class AuthorizeNetPlugin {
-  static const MethodChannel _channel =
-      const MethodChannel('authorize_net_plugin');
+  static const MethodChannel _channel = const MethodChannel('authorize_net_plugin');
 
   static Future<String> authorizeNetToken(
       {required env,
@@ -16,8 +15,7 @@ class AuthorizeNetPlugin {
       required cardHolderName,
       required apiLoginId,
       required clientId}) async {
-    final String version =
-        await _channel.invokeMethod('authorizeNetToken', <String, String>{
+    final String version = await _channel.invokeMethod('authorizeNetToken', <String, String>{
       'env': env,
       'card_number': cardNumber,
       'expiration_month': expirationMonth,

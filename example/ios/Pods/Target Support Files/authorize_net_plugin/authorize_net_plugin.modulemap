@@ -1,0 +1,6 @@
+framework module authorize_net_plugin {
+  umbrella header "authorize_net_plugin-umbrella.h"
+
+  export *
+  module * { export * }
+}
