@@ -5,6 +5,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
+
     }
 
     dependencies {
@@ -25,13 +27,13 @@ android {
     compileSdkVersion 30
 
     repositories {
-        jcenter()
+        maven { url "https://jitpack.io" }
     }
 
     dependencies {
-        implementation 'net.authorize:accept-sdk-android:1.0.2'
+        implementation 'com.github.AuthorizeNet:accept-sdk-android:1.04'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 26
     }
 }
