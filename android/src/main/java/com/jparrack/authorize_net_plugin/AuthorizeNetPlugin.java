@@ -89,20 +89,26 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
           .connectionTimeout(5000) // optional connection time out in milliseconds
           .build();
     } else {
-
       apiClient = new AcceptSDKApiClient.Builder(activity,
           AcceptSDKApiClient.Environment.SANDBOX)
           .connectionTimeout(5000) // optional connection time out in milliseconds
           .build();
     }
 
-    CardData cardData = new CardData.Builder(card_number,
+    CardData.Builder cardBuilder = new CardData.Builder(card_number,
             expiration_month, // MM
             expiration_year) // YYYY
-            .cvvCode(card_cvv) // Optional
-            .zipCode(zip_code)// Optional
-            .cardHolderName(card_holder_name)// Optional
-            .build();
+            .cvvCode(card_cvv); // Optional
+
+    if (zip_code != null && !zip_code.isEmpty()) {
+        cardBuilder.zipCode(zip_code); // Optional
+    }
+    
+    if (card_holder_name != null && !card_holder_name.isEmpty()) {
+        cardBuilder.cardHolderName(card_holder_name); // Optional
+    }
+
+    CardData cardData = cardBuilder.build();
 
     ClientKeyBasedMerchantAuthentication merchantAuthentication = ClientKeyBasedMerchantAuthentication.
             createMerchantAuthentication(api_login_id, client_id);
@@ -112,8 +118,7 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
             .merchantAuthentication(merchantAuthentication) //Merchant authentication
             .build();
 
-      apiClient.getTokenWithRequest(transactionObject, this);
-
+    apiClient.getTokenWithRequest(transactionObject, this);
   }
 
 
@@ -167,5 +172,4 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
   public void onDetachedFromActivity() {
     activity = null;
   }
-
 }
