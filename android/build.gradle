@@ -24,7 +24,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    namespace "com.authorize.net.plugin"
+    compileSdkVersion 36
 
     repositories {
         maven { url "https://jitpack.io" }
