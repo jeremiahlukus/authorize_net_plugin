@@ -24,7 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.authorize.net.plugin"
+    namespace "com.jparrack.authorize_net_plugin"
     compileSdkVersion 36
 
     repositories {
