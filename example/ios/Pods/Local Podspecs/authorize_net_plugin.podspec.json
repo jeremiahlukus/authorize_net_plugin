@@ -15,12 +15,8 @@
   },
   "source_files": "Classes/**/*",
   "dependencies": {
-    "Flutter": [
-
-    ],
-    "AuthorizeNetAccept": [
-
-    ]
+    "Flutter": [],
+    "AuthorizeNetAccept": []
   },
   "platforms": {
     "ios": "8.0"
