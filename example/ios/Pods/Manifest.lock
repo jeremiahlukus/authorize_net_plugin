@@ -1,0 +1,30 @@
+PODS:
+  - authorize_net_plugin (0.0.1):
+    - AuthorizeNetAccept
+    - Flutter
+  - AuthorizeNetAccept (0.5.0)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - authorize_net_plugin (from `.symlinks/plugins/authorize_net_plugin/ios`)
+  - AuthorizeNetAccept
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - AuthorizeNetAccept
+
+EXTERNAL SOURCES:
+  authorize_net_plugin:
+    :path: ".symlinks/plugins/authorize_net_plugin/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  authorize_net_plugin: c089953d78b487a01d9cbe319e097358ac579e09
+  AuthorizeNetAccept: 410bbacc7ffb37a3e17d5d4e7e65251b318f426d
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+
+PODFILE CHECKSUM: 4506f4c2d83fdf2bbdfd695a0d1103afbbff3cbe
+
+COCOAPODS: 1.16.2
