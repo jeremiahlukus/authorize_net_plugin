@@ -1,3 +1,6 @@
+## 0.1.5
+- Fixed build error on Flutter 3.x: removed unused `PluginRegistry.Registrar` import that no longer exists in the v2 embedding API
+
 ## 0.1.4
 - Updated Dart SDK constraints to support latest versions
 - Updated Android compileSdkVersion and added namespace for compatibility with newer Android Gradle plugin
