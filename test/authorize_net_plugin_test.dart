@@ -73,6 +73,78 @@ void main() {
         expect(capturedArguments!['client_id'], 'prod_client_id');
       });
 
+      test('omits optional fields when they are not provided', () async {
+        Map<String, dynamic>? capturedArguments;
+
+        setMockHandler((MethodCall methodCall) async {
+          capturedArguments = Map<String, dynamic>.from(methodCall.arguments);
+          return 'token';
+        });
+
+        final result = await AuthorizeNetPlugin.authorizeNetToken(
+          env: 'sandbox',
+          cardNumber: '4111111111111111',
+          expirationMonth: '12',
+          expirationYear: '2030',
+          apiLoginId: 'test_api',
+          clientId: 'test_client',
+        );
+
+        expect(result, 'token');
+        expect(capturedArguments!.containsKey('card_cvv'), isFalse);
+        expect(capturedArguments!.containsKey('zip_code'), isFalse);
+        expect(capturedArguments!.containsKey('card_holder_name'), isFalse);
+        expect(capturedArguments!['card_number'], '4111111111111111');
+      });
+
+      test('omits optional fields when they are empty strings', () async {
+        Map<String, dynamic>? capturedArguments;
+
+        setMockHandler((MethodCall methodCall) async {
+          capturedArguments = Map<String, dynamic>.from(methodCall.arguments);
+          return 'token';
+        });
+
+        await AuthorizeNetPlugin.authorizeNetToken(
+          env: 'sandbox',
+          cardNumber: '4111111111111111',
+          expirationMonth: '12',
+          expirationYear: '2030',
+          apiLoginId: 'test_api',
+          clientId: 'test_client',
+          cardCvv: '',
+          zipCode: '',
+          cardHolderName: '',
+        );
+
+        expect(capturedArguments!.containsKey('card_cvv'), isFalse);
+        expect(capturedArguments!.containsKey('zip_code'), isFalse);
+        expect(capturedArguments!.containsKey('card_holder_name'), isFalse);
+      });
+
+      test('sends only the optional fields that are provided', () async {
+        Map<String, dynamic>? capturedArguments;
+
+        setMockHandler((MethodCall methodCall) async {
+          capturedArguments = Map<String, dynamic>.from(methodCall.arguments);
+          return 'token';
+        });
+
+        await AuthorizeNetPlugin.authorizeNetToken(
+          env: 'sandbox',
+          cardNumber: '4111111111111111',
+          expirationMonth: '12',
+          expirationYear: '2030',
+          apiLoginId: 'test_api',
+          clientId: 'test_client',
+          cardCvv: '123',
+        );
+
+        expect(capturedArguments!['card_cvv'], '123');
+        expect(capturedArguments!.containsKey('zip_code'), isFalse);
+        expect(capturedArguments!.containsKey('card_holder_name'), isFalse);
+      });
+
       test('works with sandbox environment', () async {
         String? capturedEnv;
 

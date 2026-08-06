@@ -78,6 +78,10 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
   }
 
 
+  private static boolean isPresent(String value) {
+    return value != null && !value.trim().isEmpty();
+  }
+
   public void setupAuthorizeNet(String env, String card_number, String expiration_month, String expiration_year,
                                 String card_cvv, String zip_code, String card_holder_name,
                                 String api_login_id, String client_id) {
@@ -95,13 +99,17 @@ public class AuthorizeNetPlugin implements FlutterPlugin, ActivityAware, MethodC
           .build();
     }
 
-    CardData cardData = new CardData.Builder(card_number,
+    CardData.Builder cardDataBuilder = new CardData.Builder(card_number,
             expiration_month, // MM
-            expiration_year) // YYYY
-            .cvvCode(card_cvv) // Optional
-            .zipCode(zip_code)// Optional
-            .cardHolderName(card_holder_name)// Optional
-            .build();
+            expiration_year); // YYYY
+
+    // Optional in the Accept SDK: only set when present, since the SDK
+    // validates any value it is given (a blank value would be rejected).
+    if (isPresent(card_cvv)) cardDataBuilder.cvvCode(card_cvv);
+    if (isPresent(zip_code)) cardDataBuilder.zipCode(zip_code);
+    if (isPresent(card_holder_name)) cardDataBuilder.cardHolderName(card_holder_name);
+
+    CardData cardData = cardDataBuilder.build();
 
     ClientKeyBasedMerchantAuthentication merchantAuthentication = ClientKeyBasedMerchantAuthentication.
             createMerchantAuthentication(api_login_id, client_id);

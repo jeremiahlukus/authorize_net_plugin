@@ -1,3 +1,7 @@
+## 0.2.0
+- `cardCvv`, `zipCode` and `cardHolderName` are now optional, matching the underlying Android and iOS SDKs where only the card number and expiration date are required. Empty strings are treated as omitted so the SDKs don't reject them during validation
+- Annotated the `authorizeNetToken` parameters as `String` instead of leaving them `dynamic`
+
 ## 0.1.5
 - Fixed build error on Flutter 3.x: removed unused `PluginRegistry.Registrar` import that no longer exists in the v2 embedding API
 

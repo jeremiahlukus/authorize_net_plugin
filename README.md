@@ -44,6 +44,35 @@ authorizeNetToken = await AuthorizeNetPlugin.authorizeNetToken(
               '34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs');
 ```
 
+### Required and optional fields
+
+`cardCvv`, `zipCode` and `cardHolderName` are optional in the underlying
+Android and iOS SDKs, so they are optional here too. Omit the ones you don't
+collect (an empty string is treated the same as omitting it):
+
+```
+authorizeNetToken = await AuthorizeNetPlugin.authorizeNetToken(
+          env: 'test',
+          cardNumber: '370000000000002',
+          expirationMonth: '02',
+          expirationYear: '2028',
+          apiLoginId: '7594xDmRz',
+          clientId:
+              '34Fg4ta24e5Y6VQ8guqgUKguPLxW7EwqWWd2wSzCjwDUTN65w9SZ2Qk3p95X93cs');
+```
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| `env` | yes | `production` for live, anything else for sandbox |
+| `cardNumber` | yes | |
+| `expirationMonth` | yes | `MM` |
+| `expirationYear` | yes | `YY` or `YYYY` |
+| `apiLoginId` | yes | |
+| `clientId` | yes | Public client key |
+| `cardCvv` | no | Validated by the SDK when supplied |
+| `zipCode` | no | Validated by the SDK when supplied |
+| `cardHolderName` | no | Validated by the SDK when supplied |
+
  
 This will spit out the token you use to make the createTransactionRequest POST request 
 
