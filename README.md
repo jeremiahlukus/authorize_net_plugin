@@ -4,23 +4,33 @@ A simple wrapper around the AuthorizeNet android and ios sdk
 
 ## Setting up 
 
-In Android you have to to a bit of setup. 
-First go to android/app/build.gradle  in in the android {} block add
+Android needs a bit of setup. The plugin already declares the AuthorizeNet SDK
+dependency for you, but the SDK is published on jitpack, so your app has to add
+that repository. In `android/build.gradle`:
 
 ```
+allprojects {
     repositories {
-        maven { url "https://jitpack.io" }
-
+        google()
+        mavenCentral()
+        maven { url = "https://jitpack.io" }
     }
+}
+```
 
-    dependencies {
-        implementation 'com.github.AuthorizeNet:accept-sdk-android:1.04'
-    }
+The SDK still depends on the old Android support library, so Jetifier has to be
+on. In `android/gradle.properties`:
+
+```
+android.useAndroidX=true
+android.enableJetifier=true
 ```
 
 Then go into your android/app/src/main/AndroidManifest.xml file and add 
 xmlns:tools="http://schemas.android.com/tools" in the <manifest> tag.
 Then in your <application> tag add tools:replace="android:label"
+
+The plugin requires `minSdk` 26 or higher.
 
 
 ## How to use

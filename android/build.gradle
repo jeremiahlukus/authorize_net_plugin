@@ -4,37 +4,42 @@ version '1.0'
 buildscript {
     repositories {
         google()
-        jcenter()
-        maven { url "https://jitpack.io" }
-
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:9.0.1'
     }
 }
 
-rootProject.allprojects {
+allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        // Hosts the AuthorizeNet Android SDK.
+        maven { url = "https://jitpack.io" }
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.jparrack.authorize_net_plugin"
-    compileSdkVersion 36
+    namespace = "com.jparrack.authorize_net_plugin"
+    compileSdk = 36
 
-    repositories {
-        maven { url "https://jitpack.io" }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    dependencies {
-        implementation 'com.github.AuthorizeNet:accept-sdk-android:1.04'
-    }
     defaultConfig {
-        minSdkVersion 26
+        minSdk = 26
     }
+}
+
+dependencies {
+    // `api` rather than `implementation`: AuthorizeNetPlugin implements the SDK's
+    // EncryptTransactionCallback, so the SDK has to be on the consumer's compile
+    // classpath too. Consumers only need to add the jitpack repository.
+    api 'com.github.AuthorizeNet:accept-sdk-android:1.04'
 }
