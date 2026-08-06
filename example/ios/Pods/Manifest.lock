@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  authorize_net_plugin: c089953d78b487a01d9cbe319e097358ac579e09
+  authorize_net_plugin: 8c4ddbb3f19776b2fe42ce4395f2106936966948
   AuthorizeNetAccept: 410bbacc7ffb37a3e17d5d4e7e65251b318f426d
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
 
